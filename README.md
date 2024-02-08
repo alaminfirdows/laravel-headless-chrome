@@ -18,11 +18,47 @@ It uses the [chrome-php](https://github.com/chrome-php/chrome) package to run th
     composer install
     ```
 
-3. Run the server
+3. Copy the `.env.example` file to `.env`
+
+    ```
+    cp .env.example .env
+    ```
+
+4. Generate the application key
+
+    ```
+    php artisan key:generate
+    ```
+
+5. Create a new SQLite database
+
+    ```
+    touch database/database.sqlite
+    ```
+
+6. Run the migrations
+
+    ```
+    php artisan migrate
+    ```
+
+7. Install the NPM dependencies
+
+    ```
+    yarn install
+    ```
+
+8. Build the assets
+
+    ```
+    yarn build
+    ```
+
+9. Run the server
 
     ```
     php artisan serve
     ```
 
-4. Visit the website
-   [`http://localhost:8000`](http://localhost:8000)
+10. Visit the website
+    [`http://localhost:8000`](http://localhost:8000)
