@@ -7,19 +7,22 @@ It uses the [chrome-php](https://github.com/chrome-php/chrome) package to run th
 ## Installation
 
 1. Clone the repository
-   ```
-   git clone git.github.com:alaminfirdows/laravel-headless-chrome.git
-   ```
+
+    ```
+    git clone git@github.com:alaminfirdows/laravel-headless-chrome.git
+    ```
 
 2. Install the dependencies
-   ```
-   composer install
-   ```
+
+    ```
+    composer install
+    ```
 
 3. Run the server
-   ```
-   php artisan serve
-   ```
+
+    ```
+    php artisan serve
+    ```
 
 4. Visit the website
    [`http://localhost:8000`](http://localhost:8000)
