@@ -11,13 +11,20 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
+    @livewireStyles
     @vite('resources/css/app.css')
 </head>
 
 <body class="antialiased">
     <div class="max-w-5xl mx-auto">
-        @livewire('browser')
+        @livewire('scrap-page')
     </div>
+
+
+    @livewireScripts
+
+    @stack('scripts')
+
 </body>
 
 </html>

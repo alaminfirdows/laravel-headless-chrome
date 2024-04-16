@@ -13,9 +13,12 @@
 
     </div>
 
-    <div wire:loading>
+    <!-- <div wire:loading>
         Loading...
-    </div>
+    </div> -->
+
+    <p wire:stream="content">{{ $content }}</p>
+
 
     @if($content)
     <div class="border rounded-lg p-6 bg-gray-700 text-white max-h-96 overflow-y-auto">
@@ -24,4 +27,27 @@
         </pre>
     </div>
     @endif
+
+    @if(count($data))
+    @foreach($data as $item)
+    <div class="border rounded-lg p-6 bg-gray-700 text-white max-h-96 overflow-y-auto">
+        <pre class="whitespace-pre-line text-sm">
+            {{ $item['url'] ?? 'url'}}
+            ---
+            {{ $item['content'] ?? 'No content found'}}
+        </pre>
+    </div>
+    @endforeach
+    @endif
+
+    <!-- on livewire scraped event show update -->
+    @push('scripts')
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            Livewire.on('scraped', (_) => {
+                console.log('Scraped event received');
+            });
+        });
+    </script>
+    @endpush
 </div>
