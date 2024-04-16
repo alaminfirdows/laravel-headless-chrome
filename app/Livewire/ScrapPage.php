@@ -19,7 +19,7 @@ class ScrapPage extends Component
 
     public array $data = [];
 
-    public string $url = 'https://thrivedesk.com';
+    public string $url = 'https://google.com';
 
     public function handleLoad(): void
     {

@@ -13,12 +13,9 @@
 
     </div>
 
-    <!-- <div wire:loading>
+    <div wire:loading>
         Loading...
-    </div> -->
-
-    <p wire:stream="content">{{ $content }}</p>
-
+    </div>
 
     @if($content)
     <div class="border rounded-lg p-6 bg-gray-700 text-white max-h-96 overflow-y-auto">
