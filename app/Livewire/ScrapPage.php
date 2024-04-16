@@ -36,11 +36,11 @@ class ScrapPage extends Component
 
             // exit if execution time is more than 30 seconds
             $start = time();
-            $maxExecutionTime = 100;
-            $maxStackLength = 100;
+            $maxExecutionTime = 50;
+            $maxStackLength = 30;
 
-            ini_set('max_execution_time', 300);
-            set_time_limit(300);
+            // ini_set('max_execution_time', 300);
+            // set_time_limit(300);
 
             while (!empty($linkStack)) {
                 if (time() - $start > $maxExecutionTime) {
